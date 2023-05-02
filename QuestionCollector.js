@@ -57,9 +57,9 @@ function findElementIdByName(arg1)
 	//Usually the argument is '[class*=questionItem]'
 	const elementArray = Array.from(document.querySelectorAll(arg1));
 
-    //Create an array of all the id's of the elements in elementArray
-    const idArray = elementArray.map(({id}) => [id]);
-    return idArray;
+	//Create an array of all the id's of the elements in elementArray
+	const idArray = elementArray.map(({id}) => [id]);
+	return idArray;
 }
 
 //This function locates the id of the child element with class ".actionTile" in that "arg1" element
@@ -91,6 +91,6 @@ for (let i = 0; i < QuestionIdArray.length; i++)
 }
 
 
-//(7.)Create a textfile and open the url in a new window
-URLtext = makeTextFile(text);
+//(7.)Create a textfile and open the url in a new window // .replace(\"\n\n\n(URO - \d* - )	\gm, "\n$1") // .replace(\"\n\n\n(FOG - \d* - )	\gm, "\n$1") // doesnt work -> USE EDITOR FOR THIS
+URLtext = makeTextFile(text.replace(/(\d\))\s\s\s(.*)\n/gm, '$1 $2').replace(/\n(\d\))/gm, '$1').replace(/LÖSUNG\n.*$/gm, '').replace(/LÖSUNG\nA\)\s\s	/gm, '\n').replace(/"/gm, `“`).replace(/\nA\)\s\s	/gm, `\t"`).replace(/A\)\s\s	/gm, `\t"`).replace(/B\)\s\s	/gm, '').replace(/C\)\s\s	/gm, '').replace(/D\)\s\s	/gm, '').replace(/E\)\s\s	/gm, '').replace(/F\)\s\s	/gm, '').replace(/G\)\s\s	/gm, '').replace(/H\)\s\s	/gm, '').replace(/  /gm, '').replace(/ERKLÄRUNG UND LÖSUNG SCHLIESSEN ×/gm, '').replace(/ERLÄUTERUNG UND LÖSUNG >/gm, '').replace(/ERKLÄRUNG\n/gm, 'Erklärung: ').replace(/Erklärung\n/gm, 'Erklärung: ').replace(/Erklärung: \n/gm, 'Erklärung: ').replace(/(?:\r?\n){2,}/gm, `\n`).replace(/\n([A-Z][A-Z].*-)/gm, `"\n\n\n$1`).replace(/\n([A-Z][A-Z]*-)/gm, `"\n\n\n$1`).replace(/(\d).(\d):/gm, `$1.0$2:`).replace(/: ([A-Z][A-Z])/gm, `\n$1`).replace(/: "\n/gm, `"\n`).replace(/"\n\n(\n.*-.\d*\.\d*.-)/gm, `$1`).replace(/(1\) )/gm, `	"$1`).replace(/([2-9]\) )/gm, `\n$1`).replace(/	"Nur/gm, `\nNur`).replace(/	"Antwort/gm, `\nAntwort`).replace(/richtig: Nur/gm, `richtig\nNur`).replace(/	"Die Antwort/gm, `\nDie Antwort`).replace(/	"die Antwort/gm, `\ndie Antwort`).replace(/	"1, 2 und 3/gm, `\n1, 2 und 3`).replace(/richtig: Antworten/gm, `richtig\nAntworten`).replace(/richtig.: Nur/gm, `richtig.\nNur`).replace(/([A-Z][A-Z] - \d*\.\d*)\n/gm, `$1: `).replace(/([A-Z][A-Z]-\d*\.\d*-\d*\.\d*)\n/gm, `$1: `).replace(/(HNO - \d*)\n/gm, `$1: `).replace(/(OPH - \d*)\n/gm, `$1: `).replace(/(ORT - \d*)\n/gm, `$1: `).replace(/(REU - \d*)\n/gm, `$1: `).replace(/(PM - \d*.)\n/gm, `$1: `).replace(/(URO - \d*.)\n/gm, `$1: `).replace(/(FOG - \d*.)\n/gm, `$1: `).replace(/\.([0-9]):/gm, '.0$1:').replace(/.* [A-Z]\)$\n/gm, '').replace(/"\n\n"\n\n\n/gm, '\n')+`"`);
 window.open(URLtext)
