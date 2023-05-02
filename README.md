@@ -5,6 +5,7 @@ This is based on the work of [Nikolas](greek.doctor) [https://github.com/greekdo
 At the end of studies in general medicine, dentistry, and pharmacology in Hungary, a written national "final exam" must be taken. This is a multiple choice question-based exam, and the questions are provided to the students ahead of time at the website finalexam.hu. However, on the website the questions are displayed 20 at a time, the website logs you out pretty fast, logging in with my password manager is not possible, and at the time of writing (may 2023) there are 3972 questions for the german program. Having the questions in a text-based format allows for printing and easier creation of flashcards, etc.
 
 This short javascript snippet takes each page of 20 questions, copies the question stem and explanation for each question, and creates a blob textfile from which the questions can be copy pasted into a .tsv document, which can then be imported in an App like [Flashcard Hero](http://flashcardhero.com). Question/Answer are separated by `tab` and text is quoted with `double quotation marks`. You can see an example here:
+![carbon code example](https://github.com/justspacedog/finalexam-to-flashcard/raw/main/carbon.png)
 
 The Answer itself is not in the file, since the above mentioned app is capable of MCQ, so you can just select the answer options and select the right answer. Since I have used the German questions you have to adjust some things when you want to use it for the English or Hungarian questions.
 
