@@ -1,4 +1,4 @@
-# finalexam-to-flashcard
+# finalexam-to-flashcardhero
 
 This is based on the work of [Nikolas](https://greek.doctor) [https://github.com/greekdoctor/finalexam-questioncollector-js](https://github.com/greekdoctor/finalexam-questioncollector-js), but in this version it is easier to import it into a flashcard app with multiple choice question (MCQ) support. It is not completely error-free, not least because some regex commands do not work (please use a separate text editor for this - see comments in the source code).
 
