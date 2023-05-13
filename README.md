@@ -1,6 +1,6 @@
-# finalexam-to-flashcard
+# finalexam-to-flashcardhero
 
-This is based on the work of [Nikolas](https://greek.doctor) [https://github.com/greekdoctor/finalexam-questioncollector-js](https://github.com/greekdoctor/finalexam-questioncollector-js), but in this version it is easier to import it into a flashcard app with multiple choice question (MCQ) support. It is not completely error-free, not least because some regex commands do not work (please use a separate text editor for this - see comments in the source code).
+This is based on the work of [Nikolas](https://greek.doctor) [https://github.com/greekdoctor/finalexam-questioncollector-js](https://github.com/greekdoctor/finalexam-questioncollector-js), but in this version it is easier to import it into a flashcard app with multiple choice question (MCQ) support. It is not completely error-free.
 
 At the end of studies in general medicine, dentistry, and pharmacology in Hungary, a written national "final exam" must be taken. This is a multiple choice question-based exam, and the questions are provided to the students ahead of time at the website finalexam.hu. However, on the website the questions are displayed 20 at a time, the website logs you out pretty fast, logging in with my password manager is not possible, and at the time of writing (may 2023) there are 3972 questions for the german program. Having the questions in a text-based format allows for printing and easier creation of flashcards, etc.
 
